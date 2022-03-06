@@ -1,0 +1,22 @@
+.intro {
+  .location {
+    @include flexbox;
+    gap: 10px;
+    background-color: lightness-shift($color-gray);
+    font-weight: bold;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 4px 0px inset;
+  }
+  .description {
+    @include flexbox(center, center, column);
+    gap: 20px;
+    padding: 40px 14%;
+    background-color: $color-gray;
+    .description__btn {
+      color: $color-white;
+      @include background-linear;
+      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+        rgba(0, 0, 0, 0.13) 0px 6px 6px;
+    }
+  }
+}

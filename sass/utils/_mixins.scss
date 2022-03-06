@@ -1,0 +1,61 @@
+@mixin flexbox(
+  $justify-content: center,
+  $align-items: center,
+  $flex-direction: row
+) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: $flex-direction;
+}
+@mixin background-linear {
+  background: linear-gradient(175deg, $color-secondary, $color-primary);
+}
+@mixin btn {
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: none;
+}
+
+// @mixin heading-shadow(
+//   $color: lightness-shift($color-primary),
+//   $offset: $heading-shadow-size
+// ) {
+//   text-shadow: $offset $offset $color;
+// }
+
+// @mixin border($color:$color-primary) {
+//     border: .1rem solid $color;
+// }
+
+// @mixin img-ratio {
+//     width: 100%;
+//         display: block;
+//         overflow: hidden;
+//         padding-top: 56.25%;
+//         position: relative;
+//         & img {
+//             position: absolute;
+//             top: 50%;
+//             left: 50%;
+//             width: 100%;
+//             transform: translate(-50%, -50%);
+//         }
+// }
+
+// @mixin btn {
+//     padding: $grid-gutter;
+//     @include border;
+//     color: $color-primary;
+//     background: $color-secondary;
+//     cursor: pointer;
+//     &:hover{
+//         background: $color-primary;
+//         color: $color-accent;
+//     }
+//     &--full-width {
+//         width: 100%;
+//         margin: 0 auto;
+//     }
+// }

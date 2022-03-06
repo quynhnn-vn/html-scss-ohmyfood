@@ -1,12 +1,41 @@
-body {
+*,
+*::after,
+*::before {
   margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-* {
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+}
+
+body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
+  font-weight: 100;
+  line-height: 1.7;
   text-align: center;
   margin: 0;
 }
@@ -16,7 +45,18 @@ h1 {
   font-weight: 900;
 }
 
-.ctn-header .img-logo {
+button {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+
+.btn {
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: none;
+}
+
+.header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,11 +75,11 @@ h1 {
   margin: 10px 0;
 }
 
-.ctn-header .img-logo img {
+.header__logo {
   max-width: 40%;
 }
 
-.ctn-header .ctn-intro .ctn-location {
+.intro .location {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -56,14 +96,14 @@ h1 {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 10px;
-  background-color: #EAEAEA;
+  background-color: #e2e2e2;
   font-weight: bold;
   padding: 15px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 4px 0px inset;
           box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 4px 0px inset;
 }
 
-.ctn-header .ctn-description {
+.intro .description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,16 +121,13 @@ h1 {
           flex-direction: column;
   gap: 20px;
   padding: 40px 14%;
-  background-color: #F6F6F6;
+  background-color: #eaeaea;
 }
 
-.ctn-header .ctn-description .btn-explore {
-  padding: 10px 15px;
-  border-radius: 25px;
-  border: none;
-  color: white;
-  background: linear-gradient(175deg, #FF79DA, #9356DC);
+.intro .description .description__btn {
+  color: #fff;
+  background: linear-gradient(175deg, #ff79da, #9356dc);
   -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.13) 0px 6px 6px;
           box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.13) 0px 6px 6px;
 }
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=main.css.map */
