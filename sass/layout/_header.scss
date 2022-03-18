@@ -1,7 +1,6 @@
 .header {
-  @include flexbox;
-  margin: 10px 0;
-  &__logo {
-    max-width: 40%;
+  &__nav {
+    text-decoration: none;
+    color: inherit;
   }
 }

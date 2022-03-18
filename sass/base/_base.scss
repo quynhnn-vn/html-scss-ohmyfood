@@ -10,7 +10,6 @@ body {
   box-sizing: border-box;
 }
 
-main {
-  @include flexbox(center, center, column);
-  gap: $layout-margin;
+section {
+  width: 100%;
 }

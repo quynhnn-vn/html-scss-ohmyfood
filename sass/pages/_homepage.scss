@@ -1,22 +1,109 @@
+.homepage__main {
+  @include flexbox(center, center, column, 50px);
+}
+
 .intro {
   .location {
-    @include flexbox;
-    gap: 10px;
-    background-color: lightness-shift($color-gray);
+    background-color: darken($color-gray, 3%);
+    color: lighten(black, 20%);
     font-weight: bold;
     padding: 15px;
-    box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 4px 0px inset;
+    box-shadow: $shadow-box;
+    &__icon {
+      margin-right: 15px;
+    }
   }
   .description {
-    @include flexbox(center, center, column);
-    gap: 20px;
-    padding: 40px 14%;
+    @include flexbox(center, center, column, 10px);
+    padding: 50px 10%;
     background-color: $color-gray;
-    .description__btn {
+    h2 {
+      text-align: center;
+      margin: 0;
+      line-height: 2rem;
+      padding: 10px;
+    }
+    &__btn {
       color: $color-white;
+      margin-top: 20px;
       @include background-linear;
-      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
-        rgba(0, 0, 0, 0.13) 0px 6px 6px;
+      box-shadow: $shadow-button;
+    }
+  }
+}
+
+.action {
+  &__item {
+    @include flexbox(row, flex-start, center);
+    width: 80%;
+    box-shadow: $shadow-container;
+    padding: 20px 10px;
+    margin-left: 10px;
+    background-color: $color-gray;
+    border-radius: 15px;
+    cursor: pointer;
+    &__step {
+      width: 22px;
+      height: 22px;
+      line-height: 22px;
+      font-size: 11px;
+      border-radius: 50%;
+      background-color: $color-primary;
+      color: $color-white;
+      position: relative;
+      left: -20px;
+    }
+    &__icon {
+      color: $color-dark-gray;
+      width: 20px;
+      font-size: 1.2rem;
+      margin-right: 20px;
+    }
+    &__title {
+      font-weight: 700;
+    }
+  }
+}
+
+.restaurant {
+  background-color: $color-gray;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  h2 {
+    margin-bottom: 20px;
+  }
+  &__item {
+    width: 80%;
+    box-shadow: $shadow-container;
+    border-radius: 10px;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    &__tag {
+      background-color: $color-accent;
+      color: darken($color-accent, 50%);
+      font-weight: 500;
+      padding: 5px 10px;
+      font-size: 15px;
+      border-radius: 3px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      opacity: 0.9;
+    }
+    img {
+      border-radius: 10px 10px 0 0;
+      height: 170px;
+      object-fit: cover;
+    }
+    figcaption {
+      width: 100%;
+      text-align: left;
+      padding: 15px;
+      @include flexbox(row, space-between, center);
+    }
+    &__title {
+      margin-bottom: 5px;
     }
   }
 }
