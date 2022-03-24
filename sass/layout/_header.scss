@@ -1,6 +1,12 @@
 .header {
   &__nav {
+    @include flexbox;
     text-decoration: none;
     color: inherit;
+    &__back {
+      position: relative;
+      left: -20%;
+      font-size: 1.2rem;
+    }
   }
 }

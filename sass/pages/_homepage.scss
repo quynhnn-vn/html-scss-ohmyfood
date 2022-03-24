@@ -23,12 +23,6 @@
       line-height: 2rem;
       padding: 10px;
     }
-    &__btn {
-      color: $color-white;
-      margin-top: 20px;
-      @include background-linear;
-      box-shadow: $shadow-button;
-    }
   }
 }
 

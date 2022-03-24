@@ -1,3 +1,20 @@
-.menuItem {
-  background-color: $color-white;
+.menu {
+  margin: 10px 5%;
+  @include flexbox(column, center, flex-start, 10px);
+  margin-bottom: 40px;
+  .menuItem {
+    background-color: $color-white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    @include flexbox(row, space-between, flex-end);
+    &__text {
+      @include flexbox(column, center, flex-start, 5px);
+    }
+    &__title,
+    &__price {
+      font-weight: 600;
+      font-size: 18px;
+    }
+  }
 }

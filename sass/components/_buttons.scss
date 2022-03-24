@@ -1,5 +1,9 @@
 .btn {
   @include btn;
+  color: $color-white;
+  margin-top: 20px;
+  @include background-linear;
+  box-shadow: $shadow-button;
 }
 
 .list {
@@ -8,4 +12,6 @@
 }
 img {
   width: 100%;
+  height: 300px;
+  object-fit: cover;
 }
