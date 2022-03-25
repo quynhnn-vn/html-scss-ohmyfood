@@ -1,18 +1,17 @@
 @import "./utils/variables";
 @import "./utils/functions";
 @import "./utils/mixins";
+@import "./utils/animations";
 
-@import "./base/base";
+@import "./base/reset";
 @import "./base/typography";
 
-@import "./components/buttons";
-@import "./components/icons";
+@import "./components/button";
 @import "./components/menu";
 
 @import "./layout/header";
 @import "./layout/footer";
-// @import "./layout/container";
-// @import "./layout/form";
+@import "./layout/container";
 
 @import "./pages/homepage";
-@import "./pages/a_la_francaise";
+@import "./pages/restaurant_page";

@@ -1,1 +1,75 @@
+.container__main {
+  @include flexbox(column, center, flex-start, 50px);
+}
+.container__list {
+  @include flexbox(column, center, center, 20px);
+}
+.item__action {
+  @include flexbox(row, flex-start, center);
+  box-shadow: $shadow-container;
+  padding: 20px 10px;
+  border-radius: $border-radius;
+  background-color: $color-gray;
+  cursor: pointer;
+  width: 80%;
+  margin-left: 10px;
+  &__step {
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    font-size: 11px;
+    border-radius: 50%;
+    background-color: $color-primary;
+    color: $color-white;
+    position: relative;
+    left: -20px;
+  }
+  &__icon {
+    color: darken($color-gray, 40%);
+    width: 20px;
+    margin-right: 20px;
+  }
+  &__title {
+    font-weight: 500;
+  }
+  &:hover {
+    background-color: lighten($color-primary, 30%);
+  }
+  &:hover > .icon {
+    color: $color-primary;
+  }
+}
 
+.item__restaurant {
+  width: 80%;
+  box-shadow: $shadow-container;
+  border-radius: $border-radius;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  &__tag {
+    background-color: $color-accent;
+    color: darken($color-accent, 50%);
+    font-weight: 500;
+    padding: 5px 10px;
+    font-size: 15px;
+    border-radius: 3px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: 0.9;
+  }
+  img {
+    border-radius: $border-radius $border-radius 0 0;
+    height: 180px;
+  }
+  figcaption {
+    @include flexbox(row, space-between, center);
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+  }
+  h3 {
+    margin-bottom: 5px;
+  }
+}

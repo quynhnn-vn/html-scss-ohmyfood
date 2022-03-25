@@ -1,0 +1,44 @@
+.btn {
+  @include btn;
+  color: $color-white;
+  margin-top: 20px;
+  @include background-linear;
+  box-shadow: $shadow-button;
+}
+.heart__round {
+  font-size: 1.5rem;
+}
+.heart__solid {
+  display: none;
+  @include background-linear;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
+}
+.heart__btn:hover > .heart__round {
+  animation: hideOnHover 0s;
+  animation-fill-mode: forwards;
+}
+.heart__btn:hover > .heart__solid {
+  display: inline;
+  animation: showOnHover 1s;
+  animation-fill-mode: forwards;
+}
+.check__btn {
+  display: none;
+  opacity: 0;
+  width: 0;
+  border-radius: 0 $border-radius $border-radius 0;
+  font-size: 1.5rem;
+  height: 65px;
+  background-color: $color-accent;
+  color: white;
+  line-height: 65px;
+}
+.order__btn {
+  margin-bottom: 60px;
+  padding-right: 30px;
+  padding-left: 30px;
+}

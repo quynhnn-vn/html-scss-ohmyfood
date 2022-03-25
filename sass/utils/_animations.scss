@@ -1,0 +1,50 @@
+@keyframes slideInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(15%);
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes showOnHover {
+  0% {
+    display: none;
+    opacity: 0;
+    width: 0;
+    transform: translateX(10%);
+  }
+  100% {
+    display: block;
+    opacity: 1;
+    width: 15%;
+    transform: translateX(0);
+  }
+}
+@keyframes hideOnHover {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+
+@keyframes collapseOnHover {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 85%;
+  }
+}

@@ -1,0 +1,18 @@
+.main__restaurant {
+  background-color: $color-gray;
+}
+.intro {
+  &__title {
+    @include flexbox(row, space-between, center);
+    background-color: $color-gray;
+    padding: 30px 5% 0 5%;
+    border-radius: $border-radius;
+    position: relative;
+    top: -50px;
+    h2 {
+      font-family: $font-logo;
+      font-weight: 500;
+      margin: 0;
+    }
+  }
+}

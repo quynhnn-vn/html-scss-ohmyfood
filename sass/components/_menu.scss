@@ -1,20 +1,58 @@
-.menu {
-  margin: 10px 5%;
+.container__menu {
   @include flexbox(column, center, flex-start, 10px);
-  margin-bottom: 40px;
-  .menuItem {
-    background-color: $color-white;
-    border-radius: 10px;
+  margin: 10px 5% 40px 5%;
+  h4 {
+    font-weight: 400;
+    border-bottom: 3px solid $color-accent;
+    width: 40px;
+    padding-bottom: 5px;
+  }
+}
+.item__menu {
+  @include flexbox(row, space-between, flex-end);
+  width: 100%;
+  background-color: $color-white;
+  border-radius: $border-radius;
+  &__container {
+    @include flexbox(row, space-between, flex-end);
     padding: 10px;
     width: 100%;
-    @include flexbox(row, space-between, flex-end);
-    &__text {
-      @include flexbox(column, center, flex-start, 5px);
-    }
-    &__title,
-    &__price {
-      font-weight: 600;
-      font-size: 18px;
-    }
+  }
+  &__text {
+    @include flexbox(column, center, flex-start, 5px);
+    max-width: 85%;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  &__title {
+    font: $font-h3;
+  }
+  &__price {
+    background-color: $color-white;
+    font: $font-h3;
+    padding: 0 2px;
+  }
+  &:nth-of-type(1) {
+    animation: slideInTop 1s linear 0s;
+  }
+  &:nth-of-type(2) {
+    animation: slideInTop 1s linear 0.1s;
+  }
+  &:nth-of-type(3) {
+    animation: slideInTop 1s linear 0.2s;
+  }
+  &:nth-of-type(4) {
+    animation: slideInTop 1s linear 0.3s;
+  }
+  &:hover > &__container {
+    animation: collapseOnHover 1s;
+    animation-fill-mode: forwards;
+  }
+  &:hover > .check__btn {
+    display: block;
+    animation: showOnHover 1s;
+    animation-fill-mode: forwards;
   }
 }

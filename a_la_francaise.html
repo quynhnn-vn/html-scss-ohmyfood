@@ -17,11 +17,13 @@
   <body>
     <header class="header">
       <a class="header__nav" href="./homepage.html">
-        <span class="header__nav__back"><i class="fas fa-arrow-left"></i></span>
+        <span class="header__nav__back icon"
+          ><i class="fas fa-arrow-left"></i
+        ></span>
         <h1>ohmyfood</h1></a
       >
     </header>
-    <main class="a_la_francaise__main">
+    <main class="main__restaurant">
       <section class="intro">
         <figure>
           <img
@@ -31,92 +33,150 @@
         </figure>
         <div class="intro__title">
           <h2>À la française</h2>
-          <span class="heartIcon">
-            <i class="far fa-heart"></i>
-          </span>
+          <div class="heart__btn">
+            <span class="heart__round">
+              <i class="far fa-heart"></i>
+            </span>
+            <span class="heart__solid">
+              <i class="fas fa-heart"></i>
+            </span>
+          </div>
         </div>
       </section>
-      <section class="entree">
-        <div class="entree__list menu">
+      <section>
+        <div class="container__menu">
           <h4>ENTRÉES</h4>
-          <div class="entree__item menuItem">
-            <div class="menuItem__text">
-              <span class="menuItem__title">Tartare de pouple acidulé</span>
-              <span class="menuItem__description">Aux zests d'orange</span>
+          <div class="item__menu">
+            <div class="item__menu__container">
+              <div class="item__menu__text">
+                <span class="item__menu__title">Tartare de pouple acidulé</span>
+                <span class="item__menu__description">Aux zests d'orange</span>
+              </div>
+              <span class="item__menu__price">25€</span>
             </div>
-            <span class="menuItem__price">25€</span>
+            <span class="check__btn">
+              <i class="fas fa-check-circle"></i>
+            </span>
           </div>
-          <div class="entree__item menuItem">
-            <div class="menuItem__text">
-              <span class="menuItem__title">Velouté de légumes d'antan</span>
-              <span class="menuItem__description"
-                >Carotte, panais, topinambour</span
-              >
+          <div class="item__menu">
+            <div class="item__menu__container">
+              <div class="item__menu__text">
+                <span class="item__menu__title"
+                  >Velouté de légumes d'antan</span
+                >
+                <span class="item__menu__description"
+                  >Carotte, panais, topinambour</span
+                >
+              </div>
+              <span class="item__menu__price">35€</span>
             </div>
-            <span class="menuItem__price">35€</span>
+            <span class="check__btn">
+              <i class="fas fa-check-circle"></i>
+            </span>
           </div>
-          <div class="entree__item menuItem">
-            <div class="menuItem__text">
-              <span class="menuItem__title">Soupe à l'oignon</span>
-              <span class="menuItem__description">Revisitée</span>
+          <div class="item__menu">
+            <div class="item__menu__container">
+              <div class="item__menu__text">
+                <span class="item__menu__title">Soupe à l'oignon</span>
+                <span class="item__menu__description">Revisitée</span>
+              </div>
+              <span class="item__menu__price">20€</span>
             </div>
-            <span class="menuItem__price">20€</span>
+            <span class="check__btn">
+              <i class="fas fa-check-circle"></i>
+            </span>
           </div>
         </div>
-        <div class="entree__list menu">
+        <div class="container__menu">
           <h4>PLATS</h4>
-          <div class="entree__item menuItem">
-            <div class="menuItem__text">
-              <span class="menuItem__title">Coquilles Saint-Jacques</span>
-              <span class="menuItem__description"
-                >Accompagnées d'une purée de panais</span
-              >
+          <div class="item__menu">
+            <div class="item__menu__container">
+              <div class="item__menu__text">
+                <span class="item__menu__title">Coquilles Saint-Jacques</span>
+                <span class="item__menu__description"
+                  >Accompagnées d'une purée de panais</span
+                >
+              </div>
+              <span class="item__menu__price">40€</span>
             </div>
-            <span class="menuItem__price">40€</span>
+            <span class="check__btn">
+              <i class="fas fa-check-circle"></i>
+            </span>
           </div>
-          <div class="entree__item menuItem">
-            <div class="menuItem__text">
-              <span class="menuItem__title">Magret de canard</span>
-              <span class="menuItem__description"
-                >Et parmentier de pommes de terre</span
-              >
+          <div class="item__menu">
+            <div class="item__menu__container">
+              <div class="item__menu__text">
+                <span class="item__menu__title">Magret de canard</span>
+                <span class="item__menu__description"
+                  >Et parmentier de pommes de terre</span
+                >
+              </div>
+              <span class="item__menu__price">35€</span>
             </div>
-            <span class="menuItem__price">35€</span>
+            <span class="check__btn">
+              <i class="fas fa-check-circle"></i>
+            </span>
           </div>
-          <div class="entree__item menuItem">
-            <div class="menuItem__text">
-              <span class="menuItem__title">Pigeonneau d’Ille-et-Vilaine</span>
-              <span class="menuItem__description"
-                >Sur son lit de gnocchis aux légumes</span
-              >
+          <div class="item__menu">
+            <div class="item__menu__container">
+              <div class="item__menu__text">
+                <span class="item__menu__title"
+                  >Pigeonneau d’Ille-et-Vilaine</span
+                >
+                <span class="item__menu__description"
+                  >Sur son lit de gnocchis aux légumes</span
+                >
+              </div>
+              <span class="item__menu__price">44€</span>
             </div>
-            <span class="menuItem__price">44€</span>
+            <span class="check__btn">
+              <i class="fas fa-check-circle"></i>
+            </span>
           </div>
         </div>
-        <div class="entree__list menu">
+        <div class="container__menu">
           <h4>DESSERTS</h4>
-          <div class="entree__item menuItem">
-            <div class="menuItem__text">
-              <span class="menuItem__title">Pétales de violettes glacés</span>
-              <span class="menuItem__description">Et purée de noisettes</span>
+          <div class="item__menu">
+            <div class="item__menu__container">
+              <div class="item__menu__text">
+                <span class="item__menu__title"
+                  >Pétales de violettes glacés</span
+                >
+                <span class="item__menu__description"
+                  >Et purée de noisettes</span
+                >
+              </div>
+              <span class="item__menu__price">18€</span>
             </div>
-            <span class="menuItem__price">18€</span>
+            <span class="check__btn">
+              <i class="fas fa-check-circle"></i>
+            </span>
           </div>
-          <div class="entree__item menuItem">
-            <div class="menuItem__text">
-              <span class="menuItem__title">Fondant au chocolat</span>
-              <span class="menuItem__description">Revisité</span>
+          <div class="item__menu">
+            <div class="item__menu__container">
+              <div class="item__menu__text">
+                <span class="item__menu__title">Fondant au chocolat</span>
+                <span class="item__menu__description">Revisité</span>
+              </div>
+              <span class="item__menu__price">22€</span>
             </div>
-            <span class="menuItem__price">22€</span>
+            <span class="check__btn">
+              <i class="fas fa-check-circle"></i>
+            </span>
           </div>
-          <div class="entree__item menuItem">
-            <div class="menuItem__text">
-              <span class="menuItem__title">Millefeuille croustillant</span>
-              <span class="menuItem__description"
-                >Myrtilles et pâte d’amande</span
-              >
+          <div class="item__menu">
+            <div class="item__menu__container">
+              <div class="item__menu__text">
+                <span class="item__menu__title">Millefeuille croustillant</span>
+                <span class="item__menu__description"
+                  >Myrtilles et pâte d’amande</span
+                >
+              </div>
+              <span class="item__menu__price">23€</span>
             </div>
-            <span class="menuItem__price">23€</span>
+            <span class="check__btn">
+              <i class="fas fa-check-circle"></i>
+            </span>
           </div>
         </div>
         <button class="btn order__btn">Commander</button>

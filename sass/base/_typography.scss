@@ -1,31 +1,27 @@
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
   text-align: center;
-  margin: 0;
-  padding: 0;
 }
 h1 {
-  font-family: $font-logo;
-  font-size: 30px;
-  font-weight: 500;
+  font: $font-h1;
 }
 h2 {
-  font-size: 25px;
-  font-weight: 900;
+  font: $font-h2;
   text-align: left;
   margin-left: 10%;
+  margin-bottom: 20px;
 }
 h3 {
-  font-size: 20px;
-  font-weight: 700;
+  font: $font-h3;
 }
-p {
-  font-size: 18px;
-  line-height: 1.5rem;
+p,
+span {
+  font: $font-p;
+  line-height: 1.2rem;
 }
-
 button {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  font: $font-p;
+}
+.icon {
+  font-size: 1.2rem;
 }
