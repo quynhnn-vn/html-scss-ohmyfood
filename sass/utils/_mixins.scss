@@ -11,10 +11,10 @@
   flex-direction: $flex-direction;
   gap: $gap;
 }
-@mixin background-linear {
-  background: linear-gradient(175deg, $color-secondary, $color-primary);
+@mixin background-linear($percentage) {
+  background: lighten-gradient($percentage);
 }
-@mixin btn {
+@mixin button-border {
   padding: 15px;
   border-radius: 25px;
   border: none;

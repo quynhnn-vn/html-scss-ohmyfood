@@ -14,7 +14,6 @@
     transform: translateY(0);
   }
 }
-
 @keyframes showOnHover {
   0% {
     display: none;
@@ -39,12 +38,32 @@
     opacity: 0;
   }
 }
-
 @keyframes collapseOnHover {
   0% {
     width: 100%;
   }
   100% {
     width: 85%;
+  }
+}
+@keyframes spinOnLoad {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes showAfterLoad {
+  to {
+    visibility: visible;
+  }
+}
+@keyframes hideAfterLoad {
+  to {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
   }
 }

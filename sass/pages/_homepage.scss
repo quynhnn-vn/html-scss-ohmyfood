@@ -3,6 +3,7 @@
   color: lighten(black, 20%);
   padding: 15px;
   box-shadow: $shadow-box;
+  cursor: pointer;
   &__text {
     margin-left: 15px;
   }

@@ -9,12 +9,12 @@
     font-size: 18px;
     margin-bottom: 20px;
   }
-  &__list {
-    list-style-type: none;
-  }
   &__item {
     @include flexbox(row, flex-start, center);
     margin-bottom: 5px;
+    &:hover {
+      text-decoration: underline;
+    }
     &__icon {
       font-size: 0.7rem;
       width: 20px;

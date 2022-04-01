@@ -110,6 +110,58 @@
   }
 }
 
+@-webkit-keyframes spinOnLoad {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinOnLoad {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes showAfterLoad {
+  to {
+    visibility: visible;
+  }
+}
+
+@keyframes showAfterLoad {
+  to {
+    visibility: visible;
+  }
+}
+
+@-webkit-keyframes hideAfterLoad {
+  to {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+}
+
+@keyframes hideAfterLoad {
+  to {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+}
+
 *,
 *::after,
 *::before {
@@ -132,6 +184,15 @@ img {
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 body {
@@ -177,6 +238,19 @@ button {
   background: linear-gradient(175deg, #ff79da, #9356dc);
   -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.13) 0px 6px 6px;
           box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.13) 0px 6px 6px;
+  cursor: pointer;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+}
+
+.btn:hover {
+  background: linear-gradient(175deg, #ff93e1, #a16be0);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.3) 0px 6px 6px;
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.3) 0px 6px 6px;
 }
 
 .heart__round {
@@ -323,6 +397,13 @@ button {
   font: 500 18px "Roboto", sans-serif;
 }
 
+.item__menu__title, .item__menu__description {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .item__menu__price {
   background-color: #fff;
   font: 500 18px "Roboto", sans-serif;
@@ -350,16 +431,16 @@ button {
 }
 
 .item__menu:hover > .item__menu__container {
-  -webkit-animation: collapseOnHover 1s;
-          animation: collapseOnHover 1s;
+  -webkit-animation: collapseOnHover 0.5s;
+          animation: collapseOnHover 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
 .item__menu:hover > .check__btn {
   display: block;
-  -webkit-animation: showOnHover 1s;
-          animation: showOnHover 1s;
+  -webkit-animation: showOnHover 0.5s;
+          animation: showOnHover 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -404,10 +485,6 @@ button {
   margin-bottom: 20px;
 }
 
-.footer__list {
-  list-style-type: none;
-}
-
 .footer__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -428,10 +505,64 @@ button {
   margin-bottom: 5px;
 }
 
+.footer__item:hover {
+  text-decoration: underline;
+}
+
 .footer__item__icon {
   font-size: 0.7rem;
   width: 20px;
   margin-right: 5px;
+}
+
+.loader {
+  display: block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: calc(50% - 40px);
+  -webkit-animation: hideAfterLoad 0s linear 1s;
+          animation: hideAfterLoad 0s linear 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.loader div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  -webkit-animation: spinOnLoad 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+          animation: spinOnLoad 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #9356dc transparent transparent transparent;
+}
+
+.loader div:nth-child(1) {
+  -webkit-animation-delay: -0.45s;
+          animation-delay: -0.45s;
+}
+
+.loader div:nth-child(2) {
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+}
+
+.loader div:nth-child(3) {
+  -webkit-animation-delay: -0.15s;
+          animation-delay: -0.15s;
+}
+
+.homepage {
+  visibility: hidden;
+  -webkit-animation: showAfterLoad 0s linear 1s;
+          animation: showAfterLoad 0s linear 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .container__main {
@@ -589,6 +720,7 @@ button {
   padding: 15px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 4px 0px inset;
           box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 4px 0px inset;
+  cursor: pointer;
 }
 
 .location__text {

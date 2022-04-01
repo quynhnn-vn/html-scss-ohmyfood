@@ -29,6 +29,13 @@
   &__title {
     font: $font-h3;
   }
+  &__title,
+  &__description {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
   &__price {
     background-color: $color-white;
     font: $font-h3;
@@ -47,12 +54,12 @@
     animation: slideInTop 1s linear 0.3s;
   }
   &:hover > &__container {
-    animation: collapseOnHover 1s;
+    animation: collapseOnHover 0.5s;
     animation-fill-mode: forwards;
   }
   &:hover > .check__btn {
     display: block;
-    animation: showOnHover 1s;
+    animation: showOnHover 0.5s;
     animation-fill-mode: forwards;
   }
 }

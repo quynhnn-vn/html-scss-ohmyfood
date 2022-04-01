@@ -1,7 +1,11 @@
-@function lightness-shift($color) {
-  @if (lightness($color) < 25%) {
-    @return lighten($color, 15%);
+@function lighten-gradient($percentage) {
+  @if ($percentage > 0) {
+    @return linear-gradient(
+      175deg,
+      lighten($color-secondary, $percentage),
+      lighten($color-primary, $percentage)
+    );
   } @else {
-    @return darken($color, 15%);
+    @return linear-gradient(175deg, $color-secondary, $color-primary);
   }
 }
