@@ -12,26 +12,35 @@
     box-shadow: $shadow-button-hover;
   }
 }
-.heart__round {
-  font-size: 1.5rem;
-}
-.heart__solid {
-  display: none;
-  @include background-linear(0%);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 1.5rem;
-}
-.heart__btn:hover > .heart__round {
-  animation: hideOnHover 0s;
-  animation-fill-mode: forwards;
-}
-.heart__btn:hover > .heart__solid {
-  display: inline;
-  animation: showOnHover 1s;
-  animation-fill-mode: forwards;
+.heart__btn {
+  border: none;
+  .heart__round {
+    font-size: 1.5rem;
+  }
+  .heart__solid {
+    display: none;
+    @include background-linear(0%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5rem;
+  }
+  &:hover,
+  &:focus {
+    background-color: inherit;
+  }
+  &:hover > .heart__round,
+  &:focus > .heart__round {
+    animation: hideOnHover 0s;
+    animation-fill-mode: forwards;
+  }
+  &:hover > .heart__solid,
+  &:focus > .heart__solid {
+    display: inline;
+    animation: showOnHover 1.5s;
+    animation-fill-mode: forwards;
+  }
 }
 .check__btn {
   display: none;

@@ -3,9 +3,10 @@
     @include flexbox;
     text-decoration: none;
     color: inherit;
+    position: relative;
     &__back {
-      position: relative;
-      left: -20%;
+      position: absolute;
+      left: 5%;
     }
   }
 }

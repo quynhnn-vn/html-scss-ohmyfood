@@ -3,6 +3,11 @@
 }
 .container__list {
   @include flexbox(column, center, center, 20px);
+  @media only screen and (min-width: 768px) {
+    width: 90%;
+    margin-left: 5%;
+    @include flexbox(row, space-between, center, 20px);
+  }
 }
 .item__action {
   @include flexbox(row, flex-start, center);
@@ -11,7 +16,7 @@
   border-radius: $border-radius;
   background-color: $color-gray;
   cursor: pointer;
-  width: 80%;
+  width: 90%;
   margin-left: 10px;
   &__step {
     width: 22px;
@@ -38,10 +43,13 @@
   &:hover > .icon {
     color: $color-primary;
   }
+  @media only screen and (min-width: 992px) {
+    width: 30%;
+  }
 }
 
 .item__restaurant {
-  width: 80%;
+  width: 90%;
   box-shadow: $shadow-container;
   border-radius: $border-radius;
   position: relative;
@@ -71,5 +79,13 @@
   }
   h3 {
     margin-bottom: 5px;
+  }
+  .heart__btn {
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+  }
+  @media only screen and (min-width: 768px) {
+    width: calc(50% - 20px);
   }
 }

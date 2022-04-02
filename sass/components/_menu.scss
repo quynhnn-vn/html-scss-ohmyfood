@@ -1,3 +1,8 @@
+.container__menu__responsive {
+  @media only screen and (min-width: 992px) {
+    @include flexbox(row, space-between, flex-start, 20px);
+  }
+}
 .container__menu {
   @include flexbox(column, center, flex-start, 10px);
   margin: 10px 5% 40px 5%;
@@ -6,6 +11,9 @@
     border-bottom: 3px solid $color-accent;
     width: 40px;
     padding-bottom: 5px;
+  }
+  @media only screen and (min-width: 992px) {
+    width: 39%;
   }
 }
 .item__menu {
