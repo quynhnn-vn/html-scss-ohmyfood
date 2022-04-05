@@ -110,6 +110,28 @@
   }
 }
 
+@-webkit-keyframes spinOnHover {
+  0% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes spinOnHover {
+  0% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
 @-webkit-keyframes spinOnLoad {
   0% {
     -webkit-transform: rotate(0deg);
@@ -352,6 +374,11 @@ button {
           flex-direction: column;
   gap: 10px;
   margin: 10px 5% 40px 5%;
+  visibility: hidden;
+  -webkit-animation: showAfterLoad 0s linear 0.4s;
+          animation: showAfterLoad 0s linear 0.4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .container__menu h4 {
@@ -484,6 +511,11 @@ button {
           animation: showOnHover 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+
+.item__menu:hover > .check__btn i {
+  -webkit-animation: spinOnHover 0.5s;
+          animation: spinOnHover 0.5s;
 }
 
 .header__nav {

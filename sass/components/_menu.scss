@@ -6,6 +6,9 @@
 .container__menu {
   @include flexbox(column, center, flex-start, 10px);
   margin: 10px 5% 40px 5%;
+  visibility: hidden;
+  animation: showAfterLoad 0s linear 0.4s;
+  animation-fill-mode: forwards;
   h4 {
     font-weight: 400;
     border-bottom: 3px solid $color-accent;
@@ -65,9 +68,13 @@
     animation: collapseOnHover 0.5s;
     animation-fill-mode: forwards;
   }
+
   &:hover > .check__btn {
     display: block;
     animation: showOnHover 0.5s;
     animation-fill-mode: forwards;
+    i {
+      animation: spinOnHover 0.5s;
+    }
   }
 }
