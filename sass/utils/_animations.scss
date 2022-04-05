@@ -39,10 +39,7 @@
   }
 }
 @keyframes collapseOnHover {
-  0% {
-    width: 100%;
-  }
-  100% {
+  to {
     width: 85%;
   }
 }

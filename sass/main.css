@@ -93,19 +93,13 @@
 }
 
 @-webkit-keyframes collapseOnHover {
-  0% {
-    width: 100%;
-  }
-  100% {
+  to {
     width: 85%;
   }
 }
 
 @keyframes collapseOnHover {
-  0% {
-    width: 100%;
-  }
-  100% {
+  to {
     width: 85%;
   }
 }
